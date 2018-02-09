@@ -47,19 +47,15 @@ var game = {
             $("#player-one-grid").css("display", "none")
             $("#player-two-grid").css("display", "block")
             $("h2").text("Kriov FIRE FIRE FIRE")
-            $(".ship-grid2").off("mouseenter",placeShip2)
-            $(".ship-grid2").off("mouseenter",enterShip2)
-            $(".ship-grid1").off("mouseenter",placeShip)
-            $(".ship-grid1").off("mouseenter",enterShip)
+            $(".ship-grid2").off("mouseenter")
+             $(".ship-grid1").off("mouseenter")
         game.currentPlayer = game.player[1]
         } else if (game.currentPlayer === game.player[1]){
            $("#player-two-grid").css("display", "none")
             $("#player-one-grid").css("display", "block")
             $("h2").text("U.S.S Enterprise FIRE FIRE FIRE")
-            $(".ship-grid2").off("mouseenter",placeShip2)
-            $(".ship-grid2").off("mouseenter",enterShip2)
-            $(".ship-grid1").off("mouseenter",placeShip)
-            $(".ship-grid1").off("mouseenter",enterShip)
+            $(".ship-grid2").off("mouseenter")
+            $(".ship-grid1").off("mouseenter")
             game.currentPlayer = game.player[0]
         }
     },
@@ -191,7 +187,7 @@ function blackBox () { // this function places the selected boat onto the grid w
 function placeShip () { // this hilights the current ship over player 1 grid
 if ($("#selected-ship").text() === "carrier"){
     bound = carrierLength
-    $(".ship-grid1").mouseover(highlightBox)
+    $(".ship-grid1").mouseenter(highlightBox)
     $(".ship-grid1").mouseleave(whiteBox)
     
 } else if ($("#selected-ship").text() === "battleship"){
@@ -235,7 +231,7 @@ function placeShip2 () { // this function highlights the selected boat over play
     
     if ($("#selected-ship2").text() === "carrier"){
             bound = carrierLength
-            $(".ship-grid2").mouseover(highlightBox)
+            $(".ship-grid2").mouseenter(highlightBox)
             $(".ship-grid2").mouseleave(whiteBox)
             
         } else if ($("#selected-ship2").text() === "battleship"){
@@ -403,6 +399,7 @@ function bombsAway () {
     } else if ($("#player-two-ship-grid").children().eq($(this).index()).html() === "") {
         $(this).html('<img class = "explosion" src="./images/missed.gif">')
         $("#player-two-ship-grid").children().eq($(this).index()).html('<img class = "explosion" src="./images/miss.gif">')
+        $("h2").text(game.currentPlayer.name + " missed!")
         $(".bomb-grid1").off("click",bombsAway)
         $(".bomb-grid2").on("click",bombsAway2)
     }
