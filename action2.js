@@ -37,17 +37,29 @@ var game = {
         game.currentPlayer = game.player[0];
         $("h2").text(game.player[0].name +", place your ships.")
         $("#player-two-grid").css("display", "none");
+        $(".ship-grid2").on("mouseenter",placeShip2)
+        $(".ship-grid2").on("mouseenter",enterShip2)
+        $(".ship-grid1").on("mouseenter",placeShip)
+        $(".ship-grid1").on("mouseenter",enterShip)
     },
     switchPlayers: function () {
         if (game.currentPlayer === game.player[0]){
             $("#player-one-grid").css("display", "none")
             $("#player-two-grid").css("display", "block")
             $("h2").text("Kriov FIRE FIRE FIRE")
+            $(".ship-grid2").off("mouseenter",placeShip2)
+            $(".ship-grid2").off("mouseenter",enterShip2)
+            $(".ship-grid1").off("mouseenter",placeShip)
+            $(".ship-grid1").off("mouseenter",enterShip)
         game.currentPlayer = game.player[1]
         } else if (game.currentPlayer === game.player[1]){
            $("#player-two-grid").css("display", "none")
             $("#player-one-grid").css("display", "block")
             $("h2").text("U.S.S Enterprise FIRE FIRE FIRE")
+            $(".ship-grid2").off("mouseenter",placeShip2)
+            $(".ship-grid2").off("mouseenter",enterShip2)
+            $(".ship-grid1").off("mouseenter",placeShip)
+            $(".ship-grid1").off("mouseenter",enterShip)
             game.currentPlayer = game.player[0]
         }
     },
@@ -416,10 +428,10 @@ function bombsAway2 () {
 }
 
 
-$(".ship-grid2").mouseenter(placeShip2)
-$(".ship-grid2").mouseenter(enterShip2)
-$(".ship-grid1").mouseenter(placeShip)
-$(".ship-grid1").mouseenter(enterShip)
+// $(".ship-grid2").on("mouseenter",placeShip2)
+// $(".ship-grid2").on("mouseenter",enterShip2)
+// $(".ship-grid1").on("mouseenter",placeShip)
+// $(".ship-grid1").on("mouseenter",enterShip)
 $(".bomb-grid1").on("click",bombsAway)
 
 $(".switch").click(game.switchPlayers)
