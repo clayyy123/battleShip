@@ -1,0 +1,221 @@
+body {
+    background-color: rgb(0, 38, 69);
+}
+h1 {
+    text-align: center;
+    font-family: 'Audiowide', cursive;
+}
+
+h2{
+    font-family: 'Audiowide', cursive;  
+    text-align: center;
+}
+
+
+
+
+.bomb-grid1 {
+width: 30px;
+height: 30px;
+display:inline-block;
+border: 1px solid black;
+vertical-align: top;
+margin-right: -3px;
+margin-top: 0.5px;
+
+}
+#player-one-bomb-grid{
+    width: 330px;
+    
+}
+.ship-grid1{
+    width: 30px;
+    height: 30px;
+    display:inline-block;
+    border: 1px solid black;
+    vertical-align: top;
+    margin-right: -3px;
+    margin-top: 0.5px;
+}
+
+#player-one-ship-grid{
+        width: 330px;
+        display:inline-block;
+    
+   }
+.space{
+    height: 30px;
+}
+#player-one-grid {
+    margin-left:35%;
+}
+.bomb-grid2 {
+    width: 30px;
+    height: 30px;
+    display:inline-block;
+    border: 1px solid black;
+    vertical-align: top;
+    margin-right: -3px;
+    margin-top: 0.5px;
+    
+    }
+    #player-two-bomb-grid{
+        width: 330px;
+        
+    }
+    .ship-grid2{
+        width: 30px;
+        height: 30px;
+        display:inline-block;
+        border: 1px solid black;
+        vertical-align: top;
+        margin-right: -3px;
+        margin-top: 0.5px;
+        
+    }
+    #player-two-ship-grid{
+        width: 330px;
+        display: inline-block;
+        
+    }
+    #player-two-grid {
+       margin-left:35%;
+    
+    }
+
+ #ship-legend1 {
+     width: 200px;
+     height: 400px;
+     border: 1px solid black;
+     display:inline-block;
+     vertical-align: top;
+ }
+
+ .carrier {
+     height: 150px;
+     width: 20px;
+     border: 1px solid black;
+     margin-left : 10px;
+     margin-top: 10px;
+
+ }
+ #battleship1{
+     height: 20px;
+     width:120px;
+     border:1px solid black;
+     display: inline-block;
+     margin-left: 50px;
+     margin-top: 10px;
+
+ }
+ #battleship2{
+    height: 20px;
+    width:120px;
+    border:1px solid black;
+    display: inline-block;
+    margin-left: 50px;
+    margin-top: 50px;
+
+}
+
+ .cruiser{
+     height: 20px;
+     width:90px;
+     border:1px solid black;
+     display:inline-block;
+     margin-left: 50px;
+     margin-top: 90px;
+ }
+ #destroyer1{
+     width:20px;
+     height:50px;
+     border:1px solid black;
+     display:inline-block;
+     margin-top: 130px;
+     margin-left: 50px;
+     
+ }
+ #destroyer2{
+    width:20px;
+    height:50px;
+    border:1px solid black;
+    display:inline-block;
+    margin-top: 130px;
+    margin-left: 90px;
+    
+}
+
+ .submarine{
+     width: 27px;
+     height:20px;
+     border:1px solid black;
+     display:inline-block;
+     margin-top: 130px;
+     margin-left: 140px;
+}
+.ship-selection {
+    position: absolute;
+
+}
+
+#carrier-pic{
+    height: 150px;
+     width: 20px;
+}
+#battleship-pic{
+    height: 20px;
+     width:120px;
+}
+#battleship1-pic {
+    height: 20px;
+     width:120px;
+}   
+#cruiser-pic {
+    height: 20px;
+     width:90px;
+}
+#submarine-pic {
+    width: 27px;
+     height:20px;
+}
+#destroyer-pic{
+    width:20px;
+    height:50px;
+}
+#destroyer1-pic{
+    width:20px;
+    height:50px;
+}
+.current-ship {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    margin-top: 200px;
+}
+#selected-picture{
+   min-width:25px;
+    margin: 0 auto;
+}
+.white {
+    background-color:white;
+}
+#selected-picture2{
+    min-width:25px;
+     margin: 0 auto;
+ }
+ .current-ship2 {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    margin-top: 200px;
+}
+#buttons {
+    text-align: center;
+}
+
+.explosion {
+    width:30px;
+    height: 30px;
+}
+
+

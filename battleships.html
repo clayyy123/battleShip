@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <link rel="stylesheet" type ="text/css" href ="layout.css">
+    <title>Battleship</title>
+</head>
+<body>
+    <h1>BATTLESHIP</h1>
+    <h2 id="start-message"></h2>
+    <div id = "buttons">
+            <button class = "switch">Switch Turns</button>
+            <button id = "player2">Kriov ships</button>
+    </div>
+    <div id = "player-one-grid">
+        
+        <div id = "player-one-bomb-grid">
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+            <div class = "bomb-grid1"></div>
+        </div>
+        <div class = "space"></div>
+        <div id = "player-one-ship-grid">
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+            <div class = "ship-grid1"></div>
+         </div>
+         <div id = "ship-legend1">
+             <div class= "ship-selection carrier"><img id = "carrier-pic" src = "./images/carrier.jpg"></div>
+            <div class = "ship-selection battleship" id = "battleship1"><img id = "battleship-pic" src= "./images/battleship.jpg"></div>
+            <div class = "ship-selection battleship1" id = "battleship2"><img id = "battleship1-pic" src= "./images/battleship1.jpg"></div>
+            <div class = "ship-selection cruiser"><img id = "cruiser-pic" src = "./images/cruiser.jpg"></div>
+            <div class = "ship-selection submarine"><img id = "submarine-pic" src = "./images/submarine.jpg"></div>
+            <div class = "ship-selection destroyer" id = "destroyer1"><img id = "destroyer-pic" src = "./images/destroyer.jpg"></div>
+            <div class = "ship-selection destroyer1" id = "destroyer2"><img id = "destroyer1-pic" src = "./images/destroyer1.jpg"></div>
+            <div class = "current-ship">Selected Ship:
+                <span id = "selected-ship"></span>
+                <div id = "selected-picture"></div>
+            </div>
+        </div>
+       
+    </div>
+    <div id = "player-two-grid">
+        <div id = "player-two-bomb-grid">
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+                <div class = "bomb-grid2"></div>
+            
+            </div>
+            <div class = "space"></div>
+            <div id = "player-two-ship-grid">
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+                <div class = "ship-grid2"></div>
+           </div>
+           <div id = "ship-legend1">
+                <div class= "ship-selection carrier"><img id = "carrier-pic" src = "./images/carrier.jpg"></div>
+               <div class = "ship-selection battleship" id = "battleship1"><img id = "battleship-pic" src= "./images/battleship.jpg"></div>
+               <div class = "ship-selection battleship1" id = "battleship2"><img id = "battleship1-pic" src= "./images/battleship1.jpg"></div>
+               <div class = "ship-selection cruiser"><img id = "cruiser-pic" src = "./images/cruiser.jpg"></div>
+               <div class = "ship-selection submarine"><img id = "submarine-pic" src = "./images/submarine.jpg"></div>
+               <div class = "ship-selection destroyer" id = "destroyer1"><img id = "destroyer-pic" src = "./images/destroyer.jpg"></div>
+               <div class = "ship-selection destroyer1" id = "destroyer2"><img id = "destroyer1-pic" src = "./images/destroyer1.jpg"></div>
+               <div class = "current-ship2">Selected Ship:
+                   <span id = "selected-ship2"></span>
+                   <div id = "selected-picture2"></div>
+               </div>
+           </div>
+     
+
+       
+</div>
+<script src= "action2.js"></script>
+
+</body>
+</html>
