@@ -79,6 +79,7 @@ var game = {
             game.currentPlayer = game.player[1]
             $(".switch").on("click",game.switchPlayers)
             $("#player2").css ("display", "none")
+           
         }
     },
     selectShip: function (evt){
@@ -116,8 +117,8 @@ function whiteBox() { //clears the hilight when the mouse leaves
             var index = $this.index()
             var $parent = $this.parent();
             var $child = $parent.children().eq(index + (i* vertHorz))
-            $(this).css ("background-color", "rgb(0, 38, 69)")
-            $child.css ("background-color", "rgb(0, 38, 69)")
+            $(this).css ("background-color", "rgb(55, 117, 168)")
+            $child.css ("background-color", "rgb(55, 117, 168)")
             }
         }
 function blackBox () { // this function places the selected boat onto the grid when clicked
