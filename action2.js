@@ -41,6 +41,7 @@ var game = {
         $(".ship-grid2").on("mouseenter",enterShip2)
         $(".ship-grid1").on("mouseenter",placeShip)
         $(".ship-grid1").on("mouseenter",enterShip)
+       
     },
     switchPlayers: function () {
         if (game.currentPlayer === game.player[0]){
@@ -49,6 +50,7 @@ var game = {
             $("h2").text("Kriov FIRE FIRE FIRE")
             $(".ship-grid2").off("mouseenter")
              $(".ship-grid1").off("mouseenter")
+            
     
         game.currentPlayer = game.player[1]
         } else if (game.currentPlayer === game.player[1]){
@@ -57,6 +59,7 @@ var game = {
             $("h2").text("U.S.S Enterprise FIRE FIRE FIRE")
             $(".ship-grid2").off("mouseenter")
             $(".ship-grid1").off("mouseenter")
+            
             
             game.currentPlayer = game.player[0]
         }
@@ -74,6 +77,7 @@ var game = {
             $("#player-two-grid").css("display", "block")
             $("h2").text("Kriov, set your ships")
             game.currentPlayer = game.player[1]
+            $(".switch").on("click",game.switchPlayers)
             $("#player2").css ("display", "none")
         }
     },
@@ -390,7 +394,7 @@ function bombsAway () {
     if ($("#player-two-ship-grid").children().eq($(this).index()).html() !== ""){
         $(this).html('<img class = "explosion" src="./images/hit.gif">');
         $("#player-two-ship-grid").children().eq($(this).index()).html('<img class = "explosion" src="./images/fire.gif">');
-        $(".switch").off("click",game.switchPlayers)
+       
         carrierSunk();
         cruiserSunk();
         submarineSunk();
@@ -403,9 +407,8 @@ function bombsAway () {
         $(this).html('<img class = "explosion" src="./images/missed.gif">')
         $("#player-two-ship-grid").children().eq($(this).index()).html('<img class = "explosion" src="./images/miss.gif">')
         $("h2").text(game.currentPlayer.name + " missed!")
-        $(".switch").on("click",game.switchPlayers)
-        $(".bomb-grid1").off("click",bombsAway)
-        $(".bomb-grid2").on("click",bombsAway2)
+        
+        
         
     }
 
@@ -414,7 +417,7 @@ function bombsAway2 () {
     if ($("#player-one-ship-grid").children().eq($(this).index()).html() !== ""){
         $(this).html('<img class = "explosion" src="./images/hit.gif">')
         $("#player-one-ship-grid").children().eq($(this).index()).html('<img class = "explosion" src="./images/fire.gif">')
-        $(".switch").off("click",game.switchPlayers)
+        
         carrierSunk();
         cruiserSunk();
         submarineSunk();
@@ -426,9 +429,9 @@ function bombsAway2 () {
         $(this).html('<img class = "explosion" src="./images/missed.gif">')
         $("#player-one-ship-grid").children().eq($(this).index()).html('<img class = "explosion" src="./images/miss.gif">')
         $("h2").text(game.currentPlayer.name + " missed!")
-        $(".bomb-grid2").off("click",bombsAway2)
-        $(".bomb-grid1").on("click",bombsAway)
-        $(".switch").on("click",game.switchPlayers)
+       
+       
+        
     }
 }
 
@@ -437,9 +440,10 @@ function bombsAway2 () {
 // $(".ship-grid2").on("mouseenter",enterShip2)
 // $(".ship-grid1").on("mouseenter",placeShip)
 // $(".ship-grid1").on("mouseenter",enterShip)
-$(".bomb-grid1").on("click",bombsAway)
 
-$(".switch").on("click",game.switchPlayers)
+$(".bomb-grid1").on("click",bombsAway)
+$(".bomb-grid2").on("click",bombsAway2)
+
 $("#player2").click(game.player2Ships)
 $(document).on("keydown",rotateBoat)
 shipSelection.on("click", game.selectShip)
