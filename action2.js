@@ -128,8 +128,8 @@ function blackBox () { // this function places the selected boat onto the grid w
             $(this).text($("#selected-ship").text())
          for (i = 0; i < bound ; i += 1){
             var $child = $parent.children().eq(index + (i* vertHorz))
-            $(this).text($("#selected-ship").text())
-            $child.text($("#selected-ship").text())
+            $(this).text("C")
+            $child.text("C")
             $child.addClass("carrierClass" + game.currentPlayer.name)
             }
             carrierPlace = false;
@@ -137,8 +137,8 @@ function blackBox () { // this function places the selected boat onto the grid w
             $(this).text($("#selected-ship").text())
             for (i = 0; i < bound ; i += 1){
                var $child = $parent.children().eq(index + (i* vertHorz))
-               $(this).text($("#selected-ship").text())
-               $child.text($("#selected-ship").text())
+               $(this).text("B")
+               $child.text("B")
                $child.addClass("battleshipClass" + game.currentPlayer.name)
                }
             battleshipPlace = false;
@@ -146,8 +146,8 @@ function blackBox () { // this function places the selected boat onto the grid w
             $(this).text($("#selected-ship").text())
             for (i = 0; i < bound ; i += 1){
                var $child = $parent.children().eq(index + (i* vertHorz))
-               $(this).text($("#selected-ship").text())
-               $child.text($("#selected-ship").text())
+               $(this).text("CR")
+               $child.text("CR")
                $child.addClass("cruiserClass" + game.currentPlayer.name)
                }
             cruiserPlace = false;
@@ -155,8 +155,8 @@ function blackBox () { // this function places the selected boat onto the grid w
             $(this).text($("#selected-ship").text())
             for (i = 0; i < bound ; i += 1){
                var $child = $parent.children().eq(index + (i* vertHorz))
-               $(this).text($("#selected-ship").text())
-               $child.text($("#selected-ship").text())
+               $(this).text("S")
+               $child.text("S")
                $child.addClass("submarineClass" + game.currentPlayer.name)
                }
             submarinePlace = false;  
@@ -164,8 +164,8 @@ function blackBox () { // this function places the selected boat onto the grid w
             $(this).text($("#selected-ship").text())
             for (i = 0; i < bound ; i += 1){
                var $child = $parent.children().eq(index + (i* vertHorz))
-               $(this).text($("#selected-ship").text())
-               $child.text($("#selected-ship").text())
+               $(this).text("D")
+               $child.text("D")
                $child.addClass("destroyerClass" + game.currentPlayer.name)
                }
             destroyerPlace = false;
@@ -173,8 +173,8 @@ function blackBox () { // this function places the selected boat onto the grid w
             $(this).text($("#selected-ship").text())
             for (i = 0; i < bound ; i += 1){
                var $child = $parent.children().eq(index + (i* vertHorz))
-               $(this).text($("#selected-ship").text())
-               $child.text($("#selected-ship").text())
+               $(this).text("D")
+               $child.text("D")
                $child.addClass("destroyer1Class" + game.currentPlayer.name)
                }
             destroyer2Place = false;
@@ -182,8 +182,8 @@ function blackBox () { // this function places the selected boat onto the grid w
             $(this).text($("#selected-ship").text())
             for (i = 0; i < bound ; i += 1){
                var $child = $parent.children().eq(index + (i* vertHorz))
-               $(this).text($("#selected-ship").text())
-               $child.text($("#selected-ship").text())
+               $(this).text("B")
+               $child.text("B")
                $child.addClass("battleship1Class" + game.currentPlayer.name)
                }
             battleship2Place = false;
@@ -407,7 +407,8 @@ function bombsAway () {
         $(this).html('<img class = "explosion" src="./images/missed.gif">')
         $("#player-two-ship-grid").children().eq($(this).index()).html('<img class = "explosion" src="./images/miss.gif">')
         $("h2").text(game.currentPlayer.name + " missed!")
-        
+        $(".bomb-grid1").off("click",bombsAway)
+        $(".bomb-grid2").on("click",bombsAway2)
         
         
     }
@@ -429,7 +430,8 @@ function bombsAway2 () {
         $(this).html('<img class = "explosion" src="./images/missed.gif">')
         $("#player-one-ship-grid").children().eq($(this).index()).html('<img class = "explosion" src="./images/miss.gif">')
         $("h2").text(game.currentPlayer.name + " missed!")
-       
+        $(".bomb-grid1").on("click",bombsAway)
+        $(".bomb-grid2").off("click",bombsAway2)
        
         
     }
