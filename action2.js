@@ -259,15 +259,15 @@ function rotateBoat (e) { //this function is called by pressing r which rotates 
         if (keyCode === 82){
             vertHorz = 1
             toggle = false
-            $(".ship-grid1").css("background-color","white")
-            $(".ship-grid2").css("background-color","white")
+            $(".ship-grid1").css("background-color","rgb(0, 38, 69)")
+            $(".ship-grid2").css("background-color","rgb(0, 38, 69)")
         }
     } else if (toggle === false){
         if (keyCode === 82){
             vertHorz = 10
             toggle = true
-            $(".ship-grid1").css("background-color","white")
-            $(".ship-grid2").css("background-color","white")
+            $(".ship-grid1").css("background-color","rgb(0, 38, 69)")
+            $(".ship-grid2").css("background-color","rgb(0, 38, 69)")
         }
     }
 }
