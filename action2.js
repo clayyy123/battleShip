@@ -80,14 +80,14 @@ var game = {
     selectShip: function (evt){
         selectedShip = $(this).attr("class").split(' ');
         $("#selected-ship").text(selectedShip[1]);
-        var img = "<img id =" + selectedShip[1] + "-pic" + " src =" + "./images/" + selectedShip[1] + ".jpg>";
+        var img = "<img id =" + selectedShip[1] + "-picc" + " src =" + "./images/" + selectedShip[1] + "icon.jpg>";
         $("#selected-picture").html(img);
      
     },
     selectShip2: function (evt){
         selectedShip = $(this).attr("class").split(' ');
         $("#selected-ship2").text(selectedShip[1]);
-        var img = "<img id =" + selectedShip[1] + "-pic" + " src ="+ "./images/" + selectedShip[1] + ".jpg>";
+        var img = "<img id =" + selectedShip[1] + "-picc" + " src ="+ "./images/" + selectedShip[1] + "icon.jpg>";
         $("#selected-picture2").html(img);
     },
 

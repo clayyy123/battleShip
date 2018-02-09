@@ -112,16 +112,16 @@ background-color: rgb(0, 38, 69)
  }
 
  .carrier {
-     height: 150px;
-     width: 20px;
+    height: 30px;
+    width: 30px;
      border: 1px solid black;
      margin-left : 10px;
      margin-top: 10px;
 
  }
  #battleship1{
-     height: 20px;
-     width:120px;
+    height: 30px;
+    width: 30px;
      border:1px solid black;
      display: inline-block;
      margin-left: 50px;
@@ -129,8 +129,8 @@ background-color: rgb(0, 38, 69)
 
  }
  #battleship2{
-    height: 20px;
-    width:120px;
+    height: 30px;
+    width: 30px;
     border:1px solid black;
     display: inline-block;
     margin-left: 50px;
@@ -139,16 +139,16 @@ background-color: rgb(0, 38, 69)
 }
 
  .cruiser{
-     height: 20px;
-     width:90px;
+    height: 30px;
+    width: 30px;
      border:1px solid black;
      display:inline-block;
      margin-left: 50px;
      margin-top: 90px;
  }
  #destroyer1{
-     width:20px;
-     height:50px;
+    height: 30px;
+    width: 30px;
      border:1px solid black;
      display:inline-block;
      margin-top: 130px;
@@ -156,8 +156,8 @@ background-color: rgb(0, 38, 69)
      
  }
  #destroyer2{
-    width:20px;
-    height:50px;
+    height: 30px;
+    width: 30px;
     border:1px solid black;
     display:inline-block;
     margin-top: 130px;
@@ -166,8 +166,8 @@ background-color: rgb(0, 38, 69)
 }
 
  .submarine{
-     width: 27px;
-     height:20px;
+    height: 30px;
+    width: 30px;
      border:1px solid black;
      display:inline-block;
      margin-top: 130px;
@@ -179,39 +179,61 @@ background-color: rgb(0, 38, 69)
 }
 
 #carrier-pic{
-    height: 150px;
-     width: 20px;
+    /* height: 150px;
+     width: 20px; */
+     height: 30px;
+     width: 30px;
 }
 #battleship-pic{
-    height: 20px;
-     width:120px;
+    /* height: 20px;
+     width:120px; */
+     height: 30px;
+     width: 30px;
 }
 #battleship1-pic {
-    height: 20px;
-     width:120px;
+    /* height: 20px;
+     width:120px; */
+     height: 30px;
+     width: 30px;
 }   
 #cruiser-pic {
-    height: 20px;
-     width:90px;
+    /* height: 20px;
+     width:90px; */
+     height: 30px;
+     width: 30px;
 }
 #submarine-pic {
-    width: 27px;
-     height:20px;
+    /* width: 27px;
+     height:20px; */
+     height: 30px;
+     width: 30px;
 }
 #destroyer-pic{
-    width:20px;
-    height:50px;
+    /* width:20px;
+    height:50px; */
+    height: 30px;
+    width: 30px;
 }
-#destroyer1-pic{
-    width:20px;
-    height:50px;
+#destroyer1-pic {
+    /* width:20px;
+    height:50px; */
+    height: 30px;
+    width: 30px;
 }
+#destroyer1-picc, #destroyer-picc, #submarine-picc, #cruiser-picc, #battleship1-picc, #battleship-picc,#carrier-picc {
+    /* width:20px;
+    height:50px; */
+    height: 40px;
+    width: 60px;
+}
+
 .current-ship {
     display: inline-block;
     width: 100%;
     vertical-align: top;
     margin-top: 200px;
     font-family: 'Audiowide';
+    color: white;
 }
 #selected-picture{
    min-width:25px;
